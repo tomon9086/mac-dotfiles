@@ -41,7 +41,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # env
-export PATH="$PATH:$HOME/.custom-commands"
+export PATH="$HOME/.custom-commands:$PATH"
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 # alias
 alias ls="ls -G"
