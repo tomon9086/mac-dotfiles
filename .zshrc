@@ -46,6 +46,10 @@ export PATH="$PATH:$HOME/.custom-commands"
 # alias
 alias ls="ls -G"
 
+# keybinds
+zle -N fzy_history
+bindkey '^r' fzy_history
+
 # call on every commands
 preexec() {
 }
@@ -77,4 +81,13 @@ function gibo() {
 	else
 		command gibo $*
 	fi
+}
+
+function fzy_history() {
+	local cmd=$(history -n -r 1 | fzy --prompt="history > ")
+	if [ -n "${cmd}" ]; then
+		BUFFER="${cmd}"
+	fi
+	zle reset-prompt
+	# zle accept-line
 }
