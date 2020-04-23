@@ -45,6 +45,8 @@ SAVEHIST=10000
 export PATH="$HOME/.custom-commands:$PATH"
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
+export EDITOR='/usr/bin/nano'
+
 # alias
 alias ls="ls -G"
 
