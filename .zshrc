@@ -97,19 +97,3 @@ function fzy_history() {
 	zle reset-prompt
 	# zle accept-line
 }
-
-# history: ignore failed command
-# http://someneat.hatenablog.jp/entry/2017/07/25/073428
-__record_command() {
-  typeset -g _LASTCMD=${1%%$'\n'}
-  return 1
-}
-zshaddhistory_functions+=(__record_command)
-__update_history() {
-  local last_status=$?
-
-  if [[ $last_status -eq 0 ]]; then
-    print -sr -- "${_LASTCMD}"
-  fi
-}
-precmd_functions+=(__update_history)
