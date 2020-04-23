@@ -30,6 +30,10 @@ if ! zplug check --verbose; then
 fi
 zplug load
 
+# direnv
+export EDITOR='/usr/bin/nano'
+eval "$(direnv hook zsh)"
+
 # history
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -44,8 +48,6 @@ SAVEHIST=10000
 # env
 export PATH="$HOME/.custom-commands:$PATH"
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
-
-export EDITOR='/usr/bin/nano'
 
 # alias
 alias ls="ls -G"
