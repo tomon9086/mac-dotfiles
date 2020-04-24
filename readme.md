@@ -3,12 +3,12 @@ Shell configurations for macOS
 
 ## commandline tools
 ### required
+- [direnv](https://github.com/direnv/direnv/)
 - [fzy](https://github.com/jhawthorn/fzy)
 - [zplug](https://github.com/zplug/zplug)
 
 ### optional
 - [custom-commands](https://github.com/tomon9086/custom-commands)
-- [direnv](https://github.com/direnv/direnv/)
 - [gibo](https://github.com/simonwhitaker/gibo)
 - [gvm](https://github.com/moovweb/gvm)
 - [nodebrew](https://github.com/hokaccha/nodebrew)
