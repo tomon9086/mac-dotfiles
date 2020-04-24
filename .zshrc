@@ -14,7 +14,12 @@ zstyle ':vcs_info:git+set-message:*' hooks git-untracked
 
 # dependencies
 source "$DOTFILES_PATH/git-prompt.sh"
-source "$HOME/.gvm/scripts/gvm"
+
+# gvm
+__GVM_PATH="$HOME/.gvm/scripts/gvm"
+if [ -e "${__GVM_PATH}" ]; then
+  source "${__GVM_PATH}"
+fi
 
 # zplug
 source ~/.zplug/init.zsh
