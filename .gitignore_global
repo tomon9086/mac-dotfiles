@@ -3,3 +3,4 @@
 .vscode/
 .envrc
 node_modules/
+*.log
