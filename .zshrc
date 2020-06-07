@@ -46,6 +46,12 @@ zplug load
 export EDITOR='/usr/bin/nano'
 eval "$(direnv hook zsh)"
 
+# Google Cloud SDK
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
 # history
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
