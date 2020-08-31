@@ -66,6 +66,7 @@ SAVEHIST=10000
 # env
 export PATH="$HOME/.custom-commands:$PATH"
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
+export PATH="$HOME/.flutter/bin:$PATH"
 
 # alias
 alias ls="ls -G"
