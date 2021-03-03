@@ -20,9 +20,6 @@ if command -v anyenv 1>/dev/null 2>&1; then
   eval "$(anyenv init -)"
 fi
 
-# kubectl completion
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
-
 # zplug
 source ~/.zplug/init.zsh
 
@@ -121,3 +118,6 @@ export PATH="$DVM_DIR/bin:$PATH"
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
+
+# kubectl completion
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
