@@ -15,12 +15,6 @@ zstyle ':vcs_info:git+set-message:*' hooks git-untracked
 # dependencies
 source "$DOTFILES_PATH/git-prompt.sh"
 
-# gvm
-__GVM_PATH="$HOME/.gvm/scripts/gvm"
-if [ -e "${__GVM_PATH}" ]; then
-  source "${__GVM_PATH}"
-fi
-
 # anyenv
 if command -v anyenv 1>/dev/null 2>&1; then
   eval "$(anyenv init -)"
