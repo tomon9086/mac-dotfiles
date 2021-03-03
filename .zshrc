@@ -20,6 +20,9 @@ if command -v anyenv 1>/dev/null 2>&1; then
   eval "$(anyenv init -)"
 fi
 
+# kubectl completion
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
 # zplug
 source ~/.zplug/init.zsh
 
