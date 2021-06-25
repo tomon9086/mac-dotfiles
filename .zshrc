@@ -121,3 +121,7 @@ export PATH="$HOME/.serverless/bin:$PATH"
 
 # kubectl completion
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# terraform completion
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
