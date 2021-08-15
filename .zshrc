@@ -58,6 +58,7 @@ SAVEHIST=10000
 # env
 export PATH="$HOME/.custom-commands:$PATH"
 export PATH="$HOME/.flutter/bin:$PATH"
+export PATH="$HOME/Library/Android/sdk/tools/bin:$PATH"
 
 # alias
 alias ls="ls -G"
@@ -125,3 +126,7 @@ export PATH="$HOME/.serverless/bin:$PATH"
 # terraform completion
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[[ -f /Users/t-niino/.anyenv/envs/nodenv/versions/14.15.0/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/t-niino/.anyenv/envs/nodenv/versions/14.15.0/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
