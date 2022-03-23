@@ -25,6 +25,7 @@ source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "b4b4r07/enhancd", use:init.sh
+zplug "zsh-users/zsh-completions"
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
@@ -59,6 +60,7 @@ SAVEHIST=10000
 export PATH="$HOME/.custom-commands:$PATH"
 export PATH="$HOME/.flutter/bin:$PATH"
 export PATH="$HOME/Library/Android/sdk/tools/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # alias
 alias ls="ls -G"
