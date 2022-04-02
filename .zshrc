@@ -65,6 +65,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # alias
 alias ls="ls -G"
 
+if command -v http-server 1>/dev/null 2>&1; then
+  alias hs='http-server'
+fi
+
 # keybinds
 zle -N fzy_history
 bindkey '^r' fzy_history
