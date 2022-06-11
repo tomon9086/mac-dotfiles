@@ -57,6 +57,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # env
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
 export PATH="$HOME/.custom-commands:$PATH"
 export PATH="$HOME/.flutter/bin:$PATH"
 export PATH="$HOME/Library/Android/sdk/tools/bin:$PATH"
