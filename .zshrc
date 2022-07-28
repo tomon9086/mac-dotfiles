@@ -132,7 +132,7 @@ export PATH="$DVM_DIR/bin:$PATH"
 export PATH="$HOME/.serverless/bin:$PATH"
 
 # kubectl completion
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+[[ -f /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # terraform completion
 autoload -U +X bashcompinit && bashcompinit
