@@ -35,6 +35,9 @@ if ! zplug check --verbose; then
 fi
 zplug load
 
+# homebrew
+[[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # direnv
 export EDITOR='/usr/bin/nano'
 eval "$(direnv hook zsh)"
