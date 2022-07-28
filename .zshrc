@@ -40,7 +40,9 @@ zplug load
 
 # direnv
 export EDITOR='/usr/bin/nano'
-eval "$(direnv hook zsh)"
+if command -v direnv 1>/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
 
 # Google Cloud SDK
 # The next line updates PATH for the Google Cloud SDK.
