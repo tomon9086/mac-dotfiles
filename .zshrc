@@ -72,6 +72,11 @@ export PATH="$HOME/.flutter/bin:$PATH"
 export PATH="$HOME/Library/Android/sdk/tools/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# yarn
+if command -v yarn 1>/dev/null 2>&1; then
+  export PATH="$(yarn global bin):$PATH"
+fi
+
 # alias
 alias ls="ls -G"
 
