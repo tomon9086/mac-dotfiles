@@ -73,6 +73,12 @@ export PATH="$HOME/Library/Android/sdk/tools/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # yarn
+if command -v corepack 1>/dev/null 2>&1; then
+  # enable yarn (Node version >= 16.10)
+  # run `npm i -g corepack` and restart shell if Node version < 16.10
+  corepack enable
+fi
+
 if command -v yarn 1>/dev/null 2>&1; then
   export PATH="$(yarn global bin):$PATH"
 fi
