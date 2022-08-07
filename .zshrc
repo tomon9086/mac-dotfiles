@@ -18,11 +18,6 @@ zstyle ':vcs_info:git+set-message:*' hooks git-untracked
 # dependencies
 source "$DOTFILES_PATH/git-prompt.sh"
 
-# anyenv
-if command -v anyenv 1>/dev/null 2>&1; then
-  eval "$(anyenv init -)"
-fi
-
 # zplug
 source ~/.zplug/init.zsh
 
@@ -40,6 +35,11 @@ zplug load
 
 # homebrew
 [[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# anyenv
+if command -v anyenv 1>/dev/null 2>&1; then
+  eval "$(anyenv init -)"
+fi
 
 # direnv
 export EDITOR='/usr/bin/nano'
