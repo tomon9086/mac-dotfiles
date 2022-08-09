@@ -101,11 +101,11 @@ precmd() {
   # prompt
   vcs_info
   GIT_PS1_SHOWDIRTYSTATE=true
-  PROMPT="
+  PROMPT='
 %F{243}[%*]%f \
 %B${vcs_info_msg_0_}%b\
 %F{039}%~%f
- %B%F{196}>%f%b "
+ %B%F{196}>%f%b '
 }
 
 # functions
