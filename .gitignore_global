@@ -1,5 +1,6 @@
 *~
 .DS_Store
+*.icloud
 .vscode/settings.json
 .env
 .envrc
