@@ -139,6 +139,7 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export DVM_DIR="$HOME/.dvm"
 export PATH="$DVM_DIR/bin:$PATH"
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 # tabtab source for packages
 # uninstall by removing these lines
