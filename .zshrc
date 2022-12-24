@@ -106,6 +106,13 @@ precmd() {
 %F{039}%~%f
  %B%F{196}>%f%b '
 }
+zshaddhistory() {
+  local line=${1%%$'\n'}
+  local cmd=${line%% *}
+
+  # add current command to history when it return 0
+  ! [[ "$line" =~ "(^pyenv shell)" ]]
+}
 
 # functions
 function +vi-git-untracked() {
