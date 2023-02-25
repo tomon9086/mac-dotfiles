@@ -82,6 +82,10 @@ if command -v yarn 1>/dev/null 2>&1; then
   export PATH="$(yarn global bin):$PATH"
 fi
 
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # alias
 alias ls="ls -G"
 
