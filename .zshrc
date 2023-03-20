@@ -71,20 +71,23 @@ export PATH="$HOME/.flutter/bin:$PATH"
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# yarn
+# enable yarn, pnpm
 if command -v corepack 1>/dev/null 2>&1; then
   # enable yarn (Node version >= 16.10)
   # run `npm i -g corepack` and restart shell if Node version < 16.10
-  corepack enable
+  corepack enable 1>/dev/null 2>&1
 fi
 
+# yarn
 if command -v yarn 1>/dev/null 2>&1; then
   export PATH="$(yarn global bin):$PATH"
 fi
 
 # pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+if command -v pnpm 1>/dev/null 2>&1; then
+  export PNPM_HOME="$HOME/Library/pnpm"
+  export PATH="$PNPM_HOME:$PATH"
+fi
 
 # alias
 alias ls="ls -G"
