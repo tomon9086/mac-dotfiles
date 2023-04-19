@@ -119,6 +119,7 @@ zshaddhistory() {
 
   # add current command to history when it return 0
   ! [[ "$line" =~ "(^pyenv shell)" ]]
+  ! [[ "$line" =~ "(/bin/python -m pip install )" ]]
 }
 
 # functions
