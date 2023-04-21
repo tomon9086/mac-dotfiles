@@ -118,8 +118,8 @@ zshaddhistory() {
   local cmd=${line%% *}
 
   # add current command to history when it return 0
-  ! [[ "$line" =~ "(^pyenv shell)" ]]
-  ! [[ "$line" =~ "(/bin/python -m pip install )" ]]
+  [[ "$line" =~ ($HOME) ]] && return 1
+  [[ "$line" =~ (/bin/python -m pip install) ]] && return 1
 }
 
 # functions
@@ -175,3 +175,7 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
