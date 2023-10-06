@@ -66,6 +66,7 @@ SAVEHIST=10000
 # env
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/opt/zip/bin:$PATH"
+export PATH="$HOME/.gem/bin:$PATH"
 
 export PATH="$HOME/.custom-commands:$PATH"
 export PATH="$HOME/.flutter/bin:$PATH"
