@@ -178,6 +178,7 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+if command -v ng 1>/dev/null 2>&1; then
+  source <(ng completion script)
+fi
