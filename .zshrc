@@ -122,6 +122,8 @@ zshaddhistory() {
   # add current command to history when it return 0
   [[ "$line" =~ ($HOME) ]] && return 1
   [[ "$line" =~ (/bin/python -m pip install) ]] && return 1
+
+  return 0
 }
 
 # functions
