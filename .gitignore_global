@@ -2,7 +2,7 @@
 .DS_Store
 *.icloud
 .vscode/settings.json
-.env
+*.env
 .envrc
 node_modules/
 *.log
