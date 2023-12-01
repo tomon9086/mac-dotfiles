@@ -177,10 +177,10 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [[ -f "$HOME/.anyenv/envs/nodenv/versions/14.15.0/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh" ]] && . "$HOME/.anyenv/envs/nodenv/versions/14.15.0/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # Load Angular CLI autocompletion.
 if command -v ng 1>/dev/null 2>&1; then
   source <(ng completion script)
 fi
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
