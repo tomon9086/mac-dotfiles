@@ -109,10 +109,15 @@ precmd() {
   # prompt
   vcs_info
   GIT_PS1_SHOWDIRTYSTATE=true
+
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    host="%F{034}%n@%m%f:"
+  fi
+
   PROMPT='
 %F{243}[%*]%f \
 %B${vcs_info_msg_0_}%b\
-%F{039}%~%f
+${host}%F{039}%~%f
  %B%F{196}>%f%b '
 }
 zshaddhistory() {
