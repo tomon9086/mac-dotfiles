@@ -164,6 +164,10 @@ export DVM_DIR="$HOME/.dvm"
 export PATH="$DVM_DIR/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
+if command -v difft 1>/dev/null 2>&1; then
+  export GIT_EXTERNAL_DIFF=difft git diff
+fi
+
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
@@ -186,6 +190,10 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 if command -v ng 1>/dev/null 2>&1; then
   source <(ng completion script)
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
