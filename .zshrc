@@ -69,7 +69,7 @@ export PATH="/opt/homebrew/opt/zip/bin:$PATH"
 export PATH="$HOME/.gem/bin:$PATH"
 
 export PATH="$HOME/.custom-commands:$PATH"
-export PATH="$HOME/.flutter/bin:$PATH"
+export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
