@@ -93,6 +93,8 @@ fi
 
 # alias
 alias ls="ls -G"
+alias gcc="gcc-12"
+alias g++="g++-12"
 
 if command -v http-server 1>/dev/null 2>&1; then
   alias hs='http-server'
