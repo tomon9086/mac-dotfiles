@@ -178,7 +178,9 @@ fi
 export PATH="$HOME/.serverless/bin:$PATH"
 
 # kubectl completion
-[[ -f /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+if command -v kubectl 1>/dev/null 2>&1; then
+  [[ -f /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+fi
 
 # terraform completion
 autoload -U +X bashcompinit && bashcompinit
