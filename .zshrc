@@ -33,7 +33,10 @@ fi
 zplug load
 
 # homebrew
-[[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+if command -v anyenv 1>/dev/null 2>&1; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+fi
 
 # anyenv
 if command -v anyenv 1>/dev/null 2>&1; then
@@ -164,7 +167,6 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export DVM_DIR="$HOME/.dvm"
 export PATH="$DVM_DIR/bin:$PATH"
-export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 if command -v difft 1>/dev/null 2>&1; then
   export GIT_EXTERNAL_DIFF=difft git diff
