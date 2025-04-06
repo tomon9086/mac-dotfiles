@@ -7,7 +7,7 @@ DOTFILES_PATH="$HOME/.dotfiles"
 autoload -Uz colors
 autoload -Uz vcs_info
 setopt prompt_subst
-zstyle ':completion:*:*:git:*' script "$DOTFILES_PATH/git-completion.zsh"
+zstyle ':completion:*:*:git:*' script "$DOTFILES_PATH/scripts/git-completion.zsh"
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:git:*' stagedstr "%F{green}!"
@@ -16,7 +16,7 @@ zstyle ':vcs_info:*' actionformats '%F{yellow}%b|%a%f '
 zstyle ':vcs_info:git+set-message:*' hooks git-untracked
 
 # dependencies
-source "$DOTFILES_PATH/git-prompt.sh"
+source "$DOTFILES_PATH/scripts/git-prompt.sh"
 
 # zplug
 source ~/.zplug/init.zsh
