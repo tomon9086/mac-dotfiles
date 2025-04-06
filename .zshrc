@@ -108,15 +108,6 @@ function gibo() {
 	fi
 }
 
-function fzy_history() {
-	local cmd=$(history -n -r 1 | fzy --prompt="history > ")
-	if [ -n "${cmd}" ]; then
-		BUFFER="${cmd}"
-	fi
-	zle reset-prompt
-	# zle accept-line
-}
-
 if command -v difft 1>/dev/null 2>&1; then
   export GIT_EXTERNAL_DIFF=difft git diff
 fi

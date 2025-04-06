@@ -18,3 +18,12 @@ zshaddhistory() {
 
   return 0
 }
+
+function fzy_history() {
+	local cmd=$(history -n -r 1 | fzy --prompt="history > ")
+	if [ -n "${cmd}" ]; then
+		BUFFER="${cmd}"
+	fi
+	zle reset-prompt
+	# zle accept-line
+}
