@@ -3,6 +3,8 @@
 
 DOTFILES_PATH="$HOME/.dotfiles"
 
+source "$DOTFILES_PATH/scripts/history.zsh"
+
 # prompt settings
 autoload -Uz colors
 autoload -Uz vcs_info
@@ -59,17 +61,6 @@ fi
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
-
-# history
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
-
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
 
 # env
 export PATH="/usr/local/opt/llvm/bin:$PATH"
@@ -132,16 +123,6 @@ precmd() {
 %B${vcs_info_msg_0_}%b\
 ${host}%F{039}%~%f
  %B%F{196}>%f%b '
-}
-zshaddhistory() {
-  local line=${1%%$'\n'}
-  local cmd=${line%% *}
-
-  # add current command to history when it return 0
-  [[ "$line" =~ ($HOME) ]] && return 1
-  [[ "$line" =~ (/bin/python -m pip install) ]] && return 1
-
-  return 0
 }
 
 # functions
