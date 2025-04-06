@@ -3,11 +3,10 @@
 
 DOTFILES_PATH="$HOME/.dotfiles"
 
-source "$DOTFILES_PATH/scripts/history.zsh"
-source "$DOTFILES_PATH/scripts/prompt.zsh"
-
 # dependencies
+source "$DOTFILES_PATH/scripts/history.zsh"
 source "$DOTFILES_PATH/scripts/git-prompt.sh"
+source "$DOTFILES_PATH/scripts/prompt.zsh"
 
 # zplug
 source ~/.zplug/init.zsh
