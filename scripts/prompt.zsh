@@ -9,8 +9,6 @@ zstyle ':vcs_info:*' formats "%c%u%b%f "
 zstyle ':vcs_info:*' actionformats '%F{yellow}%b|%a%f '
 zstyle ':vcs_info:git+set-message:*' hooks git-untracked
 
-preexec() {
-}
 precmd() {
   # prompt
   vcs_info
