@@ -9,7 +9,12 @@ zstyle ':vcs_info:*' formats "%c%u%b%f "
 zstyle ':vcs_info:*' actionformats '%F{yellow}%b|%a%f '
 zstyle ':vcs_info:git+set-message:*' hooks git-untracked
 
-precmd() {
+# Use precmd_functions array instead of overriding precmd (avoid duplicate registration)
+if [[ ! " ${precmd_functions[@]} " =~ " setup_prompt " ]]; then
+  precmd_functions+=(setup_prompt)
+fi
+
+setup_prompt() {
   # prompt
   vcs_info
   GIT_PS1_SHOWDIRTYSTATE=true
