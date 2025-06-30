@@ -65,13 +65,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export DVM_DIR="$HOME/.dvm"
 export PATH="$DVM_DIR/bin:$PATH"
 
-# enable yarn, pnpm
-if command -v corepack 1>/dev/null 2>&1; then
-  # enable yarn (Node version >= 16.10)
-  # run `npm i -g corepack` and restart shell if Node version < 16.10
-  corepack enable 1>/dev/null 2>&1
-fi
-
 # yarn
 if command -v yarn 1>/dev/null 2>&1; then
   export PATH="$(yarn global bin):$PATH"
