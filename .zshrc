@@ -7,6 +7,7 @@ DOTFILES_PATH="$HOME/.dotfiles"
 source "$DOTFILES_PATH/scripts/history.zsh"
 source "$DOTFILES_PATH/scripts/git-prompt.sh"
 source "$DOTFILES_PATH/scripts/prompt.zsh"
+source "$DOTFILES_PATH/scripts/pnpm-completion.zsh"
 
 # zplug
 source ~/.zplug/init.zsh
@@ -142,3 +143,11 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -f /Users/tnino/.dart-cli-completion/zsh-config.zsh ]] && . /Users/tnino/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+
+# pnpm
+export PNPM_HOME="/Users/tnino/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
