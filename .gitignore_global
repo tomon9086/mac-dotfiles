@@ -1,10 +1,19 @@
+# System files
 *~
 .DS_Store
 *.icloud
+
+# IDE settings
 .vscode/settings.json
+
+# Environment files
 *.env
 !.env*.example
 .envrc
+
+# Build outputs
 node_modules/
+
+# Logs
 *.log
 tsconfig.tsbuildinfo
