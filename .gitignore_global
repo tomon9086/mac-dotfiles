@@ -3,6 +3,7 @@
 *.icloud
 .vscode/settings.json
 *.env
+!.env*.example
 .envrc
 node_modules/
 *.log
