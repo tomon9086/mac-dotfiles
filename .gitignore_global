@@ -3,9 +3,6 @@
 .DS_Store
 *.icloud
 
-# IDE settings
-.vscode/settings.json
-
 # Environment files
 *.env
 !.env*.example
