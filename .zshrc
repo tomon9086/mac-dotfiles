@@ -5,6 +5,8 @@ source "$DOTFILES_PATH/scripts/history.zsh"
 source "$DOTFILES_PATH/scripts/git-prompt.sh"
 source "$DOTFILES_PATH/scripts/prompt.zsh"
 source "$DOTFILES_PATH/scripts/pnpm-completion.zsh"
+source "$DOTFILES_PATH/scripts/ghq.zsh"
+source "$DOTFILES_PATH/scripts/worktree.zsh"
 
 # zplug
 source ~/.zplug/init.zsh
