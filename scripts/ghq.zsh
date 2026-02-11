@@ -28,4 +28,4 @@ alias g='_fzy_ghq_cmd'
 
 # Copilot CLI 連携
 function ghq_copilot() { _fzy_ghq_cmd && copilot }
-alias gc='ghq_copilot'
+alias cop='ghq_copilot'
