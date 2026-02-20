@@ -14,27 +14,27 @@ _source_os() {
 }
 
 # base scripts
-source "$DOTFILES_PATH/scripts/history.zsh"
-source "$DOTFILES_PATH/scripts/git-prompt.sh"
-source "$DOTFILES_PATH/scripts/prompt.zsh"
-source "$DOTFILES_PATH/scripts/pnpm-completion.zsh"
-source "$DOTFILES_PATH/scripts/ghq.zsh"
-source "$DOTFILES_PATH/scripts/worktree.zsh"
+source "$DOTFILES_PATH/zsh/history.zsh"
+source "$DOTFILES_PATH/zsh/git-prompt.sh"
+source "$DOTFILES_PATH/zsh/prompt.zsh"
+source "$DOTFILES_PATH/zsh/pnpm-completion.zsh"
+source "$DOTFILES_PATH/zsh/ghq.zsh"
+source "$DOTFILES_PATH/zsh/worktree.zsh"
 
 # plugins
-source "$DOTFILES_PATH/scripts/plugin.zsh"
+source "$DOTFILES_PATH/zsh/plugin.zsh"
 
 # tools, env, aliases, completions
-_source_os "$DOTFILES_PATH/scripts/tools"
-_source_os "$DOTFILES_PATH/scripts/env"
-_source_os "$DOTFILES_PATH/scripts/alias"
-_source_os "$DOTFILES_PATH/scripts/completion"
+_source_os "$DOTFILES_PATH/zsh/tools"
+_source_os "$DOTFILES_PATH/zsh/env"
+_source_os "$DOTFILES_PATH/zsh/alias"
+_source_os "$DOTFILES_PATH/zsh/completion"
 
 # keybinds
-source "$DOTFILES_PATH/scripts/keybind.zsh"
+source "$DOTFILES_PATH/zsh/keybind.zsh"
 
 # functions
-source "$DOTFILES_PATH/scripts/function.zsh"
+source "$DOTFILES_PATH/zsh/function.zsh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

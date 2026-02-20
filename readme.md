@@ -22,7 +22,7 @@ ln ~/.dotfiles/.gitignore_global ~/.config/git/ignore
 
 ```
 .zshrc                      # Main entry: OS detection + module loader
-scripts/
+zsh/
   history.zsh               # History management
   git-prompt.sh             # Git prompt support
   git-completion.zsh        # Git completion for zsh
