@@ -1,4 +1,4 @@
-DOTFILES_PATH="$HOME/.dotfiles"
+DOTFILES_PATH="${0:a:h}"
 
 # OS detection
 case "$(uname -s)" in
@@ -35,7 +35,3 @@ source "$DOTFILES_PATH/zsh/keybind.zsh"
 
 # functions
 source "$DOTFILES_PATH/zsh/function.zsh"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
