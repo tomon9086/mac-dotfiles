@@ -6,7 +6,7 @@ case "$(uname -s)" in
   Linux)  DOTFILES_OS="linux" ;;
 esac
 
-# Helper: source common.zsh + <OS>.zsh from a directory
+# Helper: source <OS>.zsh then common.zsh from a directory
 _source_os() {
   local dir="$1"
   [[ -f "$dir/${DOTFILES_OS}.zsh" ]] && source "$dir/${DOTFILES_OS}.zsh"

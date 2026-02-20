@@ -11,5 +11,5 @@ fi
 
 # difft
 if command -v difft 1>/dev/null 2>&1; then
-  export GIT_EXTERNAL_DIFF=difft git diff
+  export GIT_EXTERNAL_DIFF=difft
 fi
