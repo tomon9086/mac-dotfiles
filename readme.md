@@ -1,5 +1,5 @@
-# mac-dotfiles
-Shell configurations for macOS
+# dotfiles
+Shell configurations for macOS and Linux (Arch Linux, etc.)
 
 ## setup
 1. Clone this repository into HOME directory.
@@ -17,6 +17,42 @@ ln ~/.dotfiles/.zshrc ~/.zshrc
 mkdir -p ~/.config/git
 ln ~/.dotfiles/.gitignore_global ~/.config/git/ignore
 ```
+
+## structure
+
+```
+.zshrc                      # Main entry: OS detection + module loader
+scripts/
+  history.zsh               # History management
+  git-prompt.sh             # Git prompt support
+  git-completion.zsh        # Git completion for zsh
+  prompt.zsh                # Prompt configuration
+  pnpm-completion.zsh       # pnpm completion
+  ghq.zsh                   # ghq integration
+  worktree.zsh              # Git worktree integration
+  plugin.zsh                # zplug plugins
+  keybind.zsh               # Keybindings
+  function.zsh              # Custom functions
+  tools/                    # Tool initializations
+    common.zsh              #   Cross-platform (anyenv, direnv, etc.)
+    macos.zsh               #   macOS (Homebrew)
+    linux.zsh               #   Linux
+  env/                      # PATH and environment variables
+    common.zsh              #   Cross-platform
+    macos.zsh               #   macOS-specific paths
+    linux.zsh               #   Linux-specific paths
+  alias/                    # Aliases
+    common.zsh              #   Cross-platform
+    macos.zsh               #   macOS (ls -G, gcc-12, etc.)
+    linux.zsh               #   Linux (ls --color, etc.)
+  completion/               # Completions
+    common.zsh              #   Cross-platform
+    macos.zsh               #   macOS-specific
+```
+
+OS detection is performed in `.zshrc` (sets `DOTFILES_OS` to `macos` or `linux`).
+Each module directory contains `common.zsh` (shared) and optional `<OS>.zsh` files.
+To add support for a new OS, add a new `<os>.zsh` file in each module directory as needed.
 
 ## commandline tools
 ### required
