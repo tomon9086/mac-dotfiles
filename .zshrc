@@ -24,17 +24,9 @@ source "$DOTFILES_PATH/scripts/worktree.zsh"
 # plugins
 source "$DOTFILES_PATH/scripts/plugin.zsh"
 
-# Homebrew (must run before env and tools)
-if [[ "$DOTFILES_OS" == "macos" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)" 1>/dev/null 2>&1
-  if command -v brew 1>/dev/null 2>&1; then
-    export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
-  fi
-fi
-
-# env, tools, aliases, completions
-_source_os "$DOTFILES_PATH/scripts/env"
+# tools, env, aliases, completions
 _source_os "$DOTFILES_PATH/scripts/tools"
+_source_os "$DOTFILES_PATH/scripts/env"
 _source_os "$DOTFILES_PATH/scripts/alias"
 _source_os "$DOTFILES_PATH/scripts/completion"
 
