@@ -1,9 +1,8 @@
 DOTFILES_PATH="${0:a:h}"
 
-# OS detection
-case "$(uname -s)" in
-  Darwin) DOTFILES_OS="macos" ;;
-  Linux)  DOTFILES_OS="linux" ;;
+case "$OSTYPE" in
+  darwin*) DOTFILES_OS="macos" ;;
+  linux*)  DOTFILES_OS="linux" ;;
 esac
 
 # Helper: source <OS>.zsh then common.zsh from a directory
