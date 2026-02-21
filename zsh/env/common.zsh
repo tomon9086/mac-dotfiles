@@ -20,3 +20,8 @@ export PATH="$HOME/.serverless/bin:$PATH"
 if command -v difft 1>/dev/null 2>&1; then
   export GIT_EXTERNAL_DIFF=difft
 fi
+
+# pet
+if command -v pet 1>/dev/null 2>&1 && command -v gh 1>/dev/null 2>&1; then
+  export PET_GITHUB_ACCESS_TOKEN=$(gh auth token)
+fi
