@@ -12,25 +12,15 @@ _source_os() {
   [[ -f "$dir/common.zsh" ]] && source "$dir/common.zsh"
 }
 
-# base scripts
-source "$DOTFILES_PATH/zsh/history.zsh"
-source "$DOTFILES_PATH/zsh/git-prompt.sh"
-source "$DOTFILES_PATH/zsh/prompt.zsh"
-source "$DOTFILES_PATH/zsh/pnpm-completion.zsh"
-source "$DOTFILES_PATH/zsh/ghq.zsh"
-source "$DOTFILES_PATH/zsh/worktree.zsh"
-
-# plugins
-_source_os "$DOTFILES_PATH/zsh/plugin"
-
-# tools, env, aliases, completions
-_source_os "$DOTFILES_PATH/zsh/tools"
-_source_os "$DOTFILES_PATH/zsh/env"
 _source_os "$DOTFILES_PATH/zsh/alias"
 _source_os "$DOTFILES_PATH/zsh/completion"
-
-# keybinds
-source "$DOTFILES_PATH/zsh/keybind.zsh"
-
-# functions
-source "$DOTFILES_PATH/zsh/function.zsh"
+_source_os "$DOTFILES_PATH/zsh/env"
+_source_os "$DOTFILES_PATH/zsh/function"
+_source_os "$DOTFILES_PATH/zsh/ghq"
+_source_os "$DOTFILES_PATH/zsh/git-prompt"
+_source_os "$DOTFILES_PATH/zsh/history"
+_source_os "$DOTFILES_PATH/zsh/keybind"
+_source_os "$DOTFILES_PATH/zsh/plugin"
+_source_os "$DOTFILES_PATH/zsh/prompt"
+_source_os "$DOTFILES_PATH/zsh/tools"
+_source_os "$DOTFILES_PATH/zsh/worktree"
