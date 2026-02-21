@@ -1,2 +1,2 @@
-zle -N fzy_history
-bindkey '^r' fzy_history
+zle -N pet_search
+bindkey '^r' pet_search
