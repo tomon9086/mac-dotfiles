@@ -8,7 +8,7 @@ autoload -Uz compinit && compinit
 
 # pnpm completion
 if command -v pnpm 1>/dev/null 2>&1; then
-  source "$COMPLETION_SCRIPTS_DIR/scripts/pnpm-completion.zsh"
+  source "$COMPLETION_SCRIPTS_DIR/scripts/pnpm.zsh"
 fi
 
 # tabtab source for packages
