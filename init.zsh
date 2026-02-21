@@ -21,7 +21,7 @@ source "$DOTFILES_PATH/zsh/ghq.zsh"
 source "$DOTFILES_PATH/zsh/worktree.zsh"
 
 # plugins
-source "$DOTFILES_PATH/zsh/plugin.zsh"
+_source_os "$DOTFILES_PATH/zsh/plugin"
 
 # tools, env, aliases, completions
 _source_os "$DOTFILES_PATH/zsh/tools"
