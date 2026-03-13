@@ -15,7 +15,6 @@ _source_os() {
 _source_os "$DOTFILES_PATH/zsh/alias"
 _source_os "$DOTFILES_PATH/zsh/completion"
 _source_os "$DOTFILES_PATH/zsh/editor"
-_source_os "$DOTFILES_PATH/zsh/env"
 _source_os "$DOTFILES_PATH/zsh/function"
 _source_os "$DOTFILES_PATH/zsh/ghq"
 _source_os "$DOTFILES_PATH/zsh/git-prompt"
@@ -25,3 +24,5 @@ _source_os "$DOTFILES_PATH/zsh/plugin"
 _source_os "$DOTFILES_PATH/zsh/prompt"
 _source_os "$DOTFILES_PATH/zsh/tools"
 _source_os "$DOTFILES_PATH/zsh/worktree"
+
+_source_os "$DOTFILES_PATH/zsh/env"
