@@ -1,3 +1,11 @@
+function history() {
+  if [[ "$#" == "0" ]]; then
+    fc -ln 1 | fzy
+  else
+    builtin history "$@"
+  fi
+}
+
 function gibo() {
 	if [ -z "$2" ] &&  [ "dump" = "$1" ]; then
 		command gibo list | sed -e 's/=== .\+ ===//g' | sed -e 's/\s\+/\n/g' | grep -v '^\s*$' | fzy | xargs -I@ gibo dump @
