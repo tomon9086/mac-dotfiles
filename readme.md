@@ -23,6 +23,12 @@ mkdir -p ~/.config/git
 ln ~/.dotfiles/.gitignore_global ~/.config/git/ignore
 ```
 
+4. Link Neovim config
+
+```console
+ln -s ~/.dotfiles/nvim ~/.config/nvim
+```
+
 ## structure
 
 ```
@@ -59,6 +65,14 @@ zsh/
 OS detection is performed in `init.zsh` (sets `DOTFILES_OS` to `macos` or `linux`).
 Each module directory contains `common.zsh` (shared) and optional `<OS>.zsh` files.
 To add support for a new OS, add a new `<os>.zsh` file in each module directory as needed.
+
+```
+nvim/
+  init.lua                  # lazy.nvim bootstrap + setup
+  lua/
+    plugins/
+      init.lua              # Plugin definitions
+```
 
 ## commandline tools
 
