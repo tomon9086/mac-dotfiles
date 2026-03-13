@@ -20,7 +20,7 @@ echo 'source "$HOME/.dotfiles/init.zsh"' >> ~/.zshrc
 
 ```console
 mkdir -p ~/.config/git
-ln ~/.dotfiles/.gitignore_global ~/.config/git/ignore
+ln -s ~/.dotfiles/.gitignore_global ~/.config/git/ignore
 ```
 
 4. Link Neovim config
