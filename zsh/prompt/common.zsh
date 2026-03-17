@@ -12,6 +12,7 @@ zstyle ':vcs_info:git+set-message:*' hooks git-untracked
 # ${vcs_info_msg_0_} and ${host} are evaluated at display time via prompt_subst.
 PROMPT='
 %F{243}[%*]%f \
+${venv_prompt}\
 %B${vcs_info_msg_0_}%b\
 ${host}%F{039}%~%f
  %B%F{196}>%f%b '
@@ -23,6 +24,12 @@ fi
 
 setup_prompt() {
   GIT_PS1_SHOWDIRTYSTATE=true
+
+  if [ -n "$VIRTUAL_ENV" ]; then
+    venv_prompt="%F{yellow}(${VIRTUAL_ENV:t})%f "
+  else
+    venv_prompt=""
+  fi
 
   if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     host="%F{034}%n@%m%f:"

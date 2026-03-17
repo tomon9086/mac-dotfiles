@@ -9,6 +9,7 @@ export PATH="$HOME/flutter/bin:$PATH"
 # tools
 export DENO_INSTALL="$HOME/.deno"
 export DVM_DIR="$HOME/.dvm"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # yarn
 if command -v yarn 1>/dev/null 2>&1; then
